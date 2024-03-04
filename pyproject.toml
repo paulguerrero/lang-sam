@@ -1,3 +1,7 @@
+[build-system]
+requires = ["poetry-core >= 1.4.0"]
+build-backend = "poetry.core.masonry.api"
+
 [tool.poetry]
 name = "lang-sam"
 version = "0.1.0"
@@ -14,14 +18,14 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.8, <3.11"
-gradio = "^3.24.1"
-huggingface-hub = "^0.16.4"
-numpy = "^1.24.2"
-opencv_python = "^4.7.0.72"
-Pillow = "9.3.0"
-transformers = "^4.27.4"
-lightning = "^2.0.1"
+python = ">=3.9, <3.11"
+gradio = ">=3.24.1"
+huggingface-hub = ">=0.16.4"
+numpy = ">=1.24.2"
+opencv_python = ">=4.7.0.72"
+Pillow = ">=9.3.0"
+transformers = ">=4.27.4"
+lightning = ">=2.0.1"
 segment-anything = {git = "https://github.com/facebookresearch/segment-anything.git"}
 groundingdino = {git = "https://github.com/IDEA-Research/GroundingDINO.git"}
 
@@ -29,10 +33,6 @@ groundingdino = {git = "https://github.com/IDEA-Research/GroundingDINO.git"}
 pre-commit = "^2.20.0"
 commitizen = "2.27.0"
 pytest = "^7.1.2"
-
-[build-system]
-requires = ["poetry-core >= 1.4.0"]
-build-backend = "poetry.core.masonry.api"
 
 [tool.ruff]
 target-version = "py38"
